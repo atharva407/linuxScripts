@@ -1,6 +1,3 @@
-# Script to create Swap Memory in Linux
+# Linux Scripts that will be helpful
 
-curl -O https://raw.githubusercontent.com/atharva407/makeSwapMemory/main/swap.sh
-
-
-chmod +x swap.sh && ./swap.sh
+This repo contains bash scripts
