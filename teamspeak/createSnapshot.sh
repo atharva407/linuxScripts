@@ -13,13 +13,14 @@ USER="$1"
 PASS="$2"
 HOST="$3"
 PORT="$4"
-OUTPUT_FILE="$5"
+FINAL_FILE="$5"
+OUTPUT_FILE="snapshot.txt"
 SID=1
 if [ $# -gt 3 ]; then
   PORT="${4}"
 fi
 if [ $# -gt 4 ]; then
-  OUTPUT_FILE="${5}"
+  FINAL_FILE="${5}"
 fi
 if [ $# -gt 5 ]; then
   SID="${6}"
@@ -79,7 +80,7 @@ while IFS=$'\n' read -r "line"; do
   ((++line_number))
 done < "${OUTPUT_FILE}"
 
-mv real_${OUTPUT_FILE} ${OUTPUT_FILE}
+mv real_${OUTPUT_FILE} ${FINAL_FILE}
 
-echo "Successfully retrieved the image, it is now in ${OUTPUT_FILE}"
+echo "Successfully retrieved the image, it is now in ${FINAL_FILE}"
 
