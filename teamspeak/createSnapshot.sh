@@ -12,8 +12,8 @@ fi
 USER="$1"
 PASS="$2"
 HOST="$3"
-PORT="10011"
-OUTPUT_FILE="snapshot.txt"
+PORT="$4"
+OUTPUT_FILE="$5"
 SID=1
 if [ $# -gt 3 ]; then
   PORT="${4}"
